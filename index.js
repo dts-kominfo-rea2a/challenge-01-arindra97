@@ -4,9 +4,104 @@
 const firstUser = {};
 const secondUser = {};
 
+// create favoriteColor firstUser without duplicate values 
+const firstFavoriteColor = new Set();
+    firstFavoriteColor.add("Yellow");
+    firstFavoriteColor.add("Pink");
+    firstFavoriteColor.add("White");
+    firstFavoriteColor.add("Purple");
+
+// create favoriteColor secondUser without duplicate values 
+const secondFavoriteColor = new Set();
+    secondFavoriteColor.add("Blue");
+    secondFavoriteColor.add("Black");
+    secondFavoriteColor.add("Grey");
+
+// create favoriteRestaurant firstUser without duplicate values 
+const firstFavoriteRestaurant = new Set();
+    firstFavoriteRestaurant.add("Bento");
+    firstFavoriteRestaurant.add("Sushi");
+    firstFavoriteRestaurant.add("Pancake");
+    firstFavoriteRestaurant.add("Eggy");
+    firstFavoriteRestaurant.add("Tempura");
+    firstFavoriteRestaurant.add("Bento");
+    firstFavoriteRestaurant.add("Eggy");
+    firstFavoriteRestaurant.add("Padang");
+    firstFavoriteRestaurant.add("Tteok");
+    firstFavoriteRestaurant.add("Sushi");
+    firstFavoriteRestaurant.add("Sushi");
+
+// create favoriteRestaurant secondUser without duplicate values 
+const secondFavoriteRestaurant = new Set();
+    secondFavoriteRestaurant.add("Tempura");
+    secondFavoriteRestaurant.add("Bento");
+    secondFavoriteRestaurant.add("Sushi");
+    secondFavoriteRestaurant.add("Pancake");
+    secondFavoriteRestaurant.add("Padang");
+    secondFavoriteRestaurant.add("Katsu");
+    secondFavoriteRestaurant.add("Geprek");
+    secondFavoriteRestaurant.add("Pancake");
+    secondFavoriteRestaurant.add("Eggy");
+
+// define educationUser
+const firstUserEducation = [];
+const secondUserEducation = [];
+
+// define firstEducationUser from Elementary School - Senior High School
+const firstElementarySchool = {};
+    firstElementarySchool.name = "SD 01";
+    firstElementarySchool.city = "Jakarta";
+    firstElementarySchool.graduate = 2016;
+const firstJuniorHighSchool = {};
+    firstJuniorHighSchool.name = "SMP 02";
+    firstJuniorHighSchool.city = "Jakarta";
+    firstJuniorHighSchool.graduate = 2019;
+const firstSeniorHighSchool = {"name":"SMA 03", "city":"Tangerang"};
+
+// define secondEducationUser from Elementary School - University
+const secondElementarySchool = {};
+    secondElementarySchool.name = "SD 02";
+    secondElementarySchool.city = "Jakarta";
+    secondElementarySchool.graduate = 2010;
+const secondJuniorHighSchool = {};
+    secondJuniorHighSchool.name = "SMP 03";
+    secondJuniorHighSchool.city = "Bogor";
+    secondJuniorHighSchool.graduate = 2013;
+const secondSeniorHighSchool = {};
+    secondSeniorHighSchool.name = "SMA 01";
+    secondSeniorHighSchool.city = "Surabaya";
+    secondSeniorHighSchool.graduate = 2016;
+const secondUniversity = { "name":"Universitas Maju", "city":"Tangerang"};
+
+// Update Value from firstUserEducation & secondUserEducation
+firstUserEducation.push(firstElementarySchool,firstJuniorHighSchool,firstSeniorHighSchool);
+secondUserEducation.push(secondElementarySchool,secondJuniorHighSchool,secondSeniorHighSchool,secondUniversity);
+
+// Update Value from firstUser
+firstUser.name = "Monica";
+firstUser.gender = "Female";
+firstUser.age = 17;
+firstUser.email = "monica@dingdong.com";
+firstUser.favoriteColor = firstFavoriteColor;
+firstUser.isHavePet = "Yes";
+firstUser.education = firstUserEducation;
+firstUser.favoriteRestaurant = firstFavoriteRestaurant;
+
+// Update Value from secondUser
+secondUser.name = "Wendy";
+secondUser.gender = "Male";
+secondUser.age = 23;
+secondUser.email = "wendy@dingdong.com";
+secondUser.favoriteColor = secondFavoriteColor;
+secondUser.isHavePet = "Yes";
+secondUser.education = secondUserEducation;
+secondUser.favoriteRestaurant = secondFavoriteRestaurant;
+
 // TODO: Masukkan hasil akhir dari kedua user di sini
 const users = [];
 
+users.push(firstUser);
+users.push(secondUser);
 // ! JANGAN MODIFIKASI LINE DI BAWAH
 function main() {
     console.log(users.length || users.size);
